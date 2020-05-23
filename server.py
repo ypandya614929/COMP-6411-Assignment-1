@@ -405,6 +405,7 @@ if __name__ == '__main__':
     with socketserver.TCPServer((HOST_NAME, PORT), Server) as server:
         try:
             server.server_operation_obj = ServerOperations()
+            print("Server is running !")
             server.serve_forever()
         except Exception as e:
             print(e)
