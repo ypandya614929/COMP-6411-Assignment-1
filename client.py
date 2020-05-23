@@ -124,20 +124,20 @@ class ClientOperations:
         res_data_dict : dict
             The dictionary containing customer data
         """
-        print('---------------------------------------------------------------')
-        print('{:<15}{:<6}{:<30}{:<}'.format('name', 'age', 'address',
+        print('---------------------------------------------------------------------------------------------------')
+        print('{:<25}{:<10}{:<50}{:<}'.format('name', 'age', 'address',
                                              'phone'))
-        print('---------------------------------------------------------------')
+        print('---------------------------------------------------------------------------------------------------')
 
         for (key, value_dict) in res_data_dict.items():
             name = key
             age = value_dict.get('age', '')
             address = value_dict.get('address', '')
             phone = value_dict.get('phone', '')
-            print('{:<15}{:<6}{:<30}{:<}'.format(name, age, address,
+            print('{:<25}{:<10}{:<50}{:<}'.format(name, age, address,
                                                  phone))
 
-        print('---------------------------------------------------------------')
+        print('---------------------------------------------------------------------------------------------------')
 
     @staticmethod
     def print_response(data_dict):
@@ -152,17 +152,17 @@ class ClientOperations:
         if data_dict.get('message'):
             ClientOperations().general_print_fun(data_dict['message'])
         else:
-            print('---------------------------------------------------------------')
-            print('{:<15}{:<6}{:<30}{:<}'.format('name', 'age', 'address', 'phone'))
-            print('---------------------------------------------------------------')
+            print('---------------------------------------------------------------------------------------------------')
+            print('{:<25}{:<10}{:<50}{:<}'.format('name', 'age', 'address', 'phone'))
+            print('---------------------------------------------------------------------------------------------------')
 
             name = data_dict.get('name')
             age = data_dict.get('age', '')
             address = data_dict.get('address', '')
             phone = data_dict.get('phone', '')
-            print('{:<15}{:<6}{:<30}{:<}'.format(name, age, address, phone))
+            print('{:<25}{:<10}{:<50}{:<}'.format(name, age, address, phone))
 
-            print('---------------------------------------------------------------')
+            print('---------------------------------------------------------------------------------------------------')
 
     @staticmethod
     def validate_age(age):
