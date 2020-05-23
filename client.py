@@ -180,6 +180,9 @@ class ClientOperations:
         if age:
             try:
                 age = int(age)
+                if age <= 0:
+                    ClientOperations().general_print_fun("Age can't be 0, Please enter valid age")
+                    return False
             except Exception:
                 ClientOperations().general_print_fun("Please enter valid age")
                 return False

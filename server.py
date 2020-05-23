@@ -60,6 +60,7 @@ class ServerOperations:
     def __init__(self):
         self.database_dict = {}
         self.read_file()
+        print("Data successfully loaded into server !")
 
     def get_customer(self, name=''):
         """It takes customer name and return customer detail if exists
